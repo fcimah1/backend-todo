@@ -1,0 +1,510 @@
+{
+	"info": {
+		"_postman_id": "a95dcb48-d995-4bdf-af0d-cd2a92b7300c",
+		"name": "Tasks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "31994745"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "tillman.kailee@example.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{BASE_URL}}/auth/login"
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTU1NzQ1NTcsImV4cCI6MTcxNTU3ODE1NywibmJmIjoxNzE1NTc0NTU3LCJqdGkiOiI3NWJYVGR1emFIMlkxdVFXIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.5cMcT2QDMyBomNUhkbHoKmV8SZt9xtEM7Kf_4EJ5ph4"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "jack shan",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "bla bla bla",
+									"type": "text"
+								},
+								{
+									"key": "production_date",
+									"value": "1990-01-01",
+									"type": "text"
+								},
+								{
+									"key": "director",
+									"value": "mohamed",
+									"type": "text"
+								},
+								{
+									"key": "duration",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"value": "ssssssss",
+									"type": "text"
+								},
+								{
+									"key": "rate",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "genre_id",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{BASE_URL}}/auth/logout"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "get all users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTU1NzQ1NTcsImV4cCI6MTcxNTU3ODE1NywibmJmIjoxNzE1NTc0NTU3LCJqdGkiOiI3NWJYVGR1emFIMlkxdVFXIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.5cMcT2QDMyBomNUhkbHoKmV8SZt9xtEM7Kf_4EJ5ph4Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTU1Mzg3NjIsImV4cCI6MTcxNTU0MjM2MiwibmJmIjoxNzE1NTM4NzYyLCJqdGkiOiJzdEVsU3FGNWdRaXE1a2kyIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Zk5A-tOGv2y_bbGhYkY6qJ_tCepHZ0OTQG0pa1IImZw"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "jack shan",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "bla bla bla",
+									"type": "text"
+								},
+								{
+									"key": "production_date",
+									"value": "1990-01-01",
+									"type": "text"
+								},
+								{
+									"key": "director",
+									"value": "mohamed",
+									"type": "text"
+								},
+								{
+									"key": "duration",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"value": "ssssssss",
+									"type": "text"
+								},
+								{
+									"key": "rate",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "genre_id",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{BASE_URL}}/users"
+					},
+					"response": []
+				},
+				{
+					"name": "get user by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTU1NzQ1NTcsImV4cCI6MTcxNTU3ODE1NywibmJmIjoxNzE1NTc0NTU3LCJqdGkiOiI3NWJYVGR1emFIMlkxdVFXIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.5cMcT2QDMyBomNUhkbHoKmV8SZt9xtEM7Kf_4EJ5ph4"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "jack shan",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "bla bla bla",
+									"type": "text"
+								},
+								{
+									"key": "production_date",
+									"value": "1990-01-01",
+									"type": "text"
+								},
+								{
+									"key": "director",
+									"value": "mohamed",
+									"type": "text"
+								},
+								{
+									"key": "duration",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"value": "ssssssss",
+									"type": "text"
+								},
+								{
+									"key": "rate",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "genre_id",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{BASE_URL}}/users/3"
+					},
+					"response": []
+				},
+				{
+					"name": "delete user by id",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTU1NzQ1NTcsImV4cCI6MTcxNTU3ODE1NywibmJmIjoxNzE1NTc0NTU3LCJqdGkiOiI3NWJYVGR1emFIMlkxdVFXIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.5cMcT2QDMyBomNUhkbHoKmV8SZt9xtEM7Kf_4EJ5ph4"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "jack shan",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "bla bla bla",
+									"type": "text"
+								},
+								{
+									"key": "production_date",
+									"value": "1990-01-01",
+									"type": "text"
+								},
+								{
+									"key": "director",
+									"value": "mohamed",
+									"type": "text"
+								},
+								{
+									"key": "duration",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"value": "ssssssss",
+									"type": "text"
+								},
+								{
+									"key": "rate",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "genre_id",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{BASE_URL}}/users/delete/3"
+					},
+					"response": []
+				},
+				{
+					"name": "add new user",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTU4Mzg0MDUsImV4cCI6MTcxNTg0MjAwNSwibmJmIjoxNzE1ODM4NDA1LCJqdGkiOiJEZjNuakNnZmJHVkZWTW5tIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.OUlm_wsKKLpMnP9JVQqrzL48l4VbFpt6xHYwoHzBFOE"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Mohamed Ahmed",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "eng.mohamedahmed2741991@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{BASE_URL}}/users/create"
+					},
+					"response": []
+				},
+				{
+					"name": "udate user",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTU1NzQ1NTcsImV4cCI6MTcxNTU3ODE1NywibmJmIjoxNzE1NTc0NTU3LCJqdGkiOiI3NWJYVGR1emFIMlkxdVFXIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.5cMcT2QDMyBomNUhkbHoKmV8SZt9xtEM7Kf_4EJ5ph4"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Mohamed\",\r\n    \"email\":\"fci.mah@gmail.com\",\r\n    \"password\":\"12345\"\r\n}"
+						},
+						"url": "{{BASE_URL}}/users/update/2"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tasks",
+			"item": [
+				{
+					"name": "all tasks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BASE_URL}}/tasks"
+					},
+					"response": []
+				},
+				{
+					"name": "get done tasks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BASE_URL}}/tasks/done/0"
+					},
+					"response": []
+				},
+				{
+					"name": "delete task by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{BASE_URL}}/tasks/delete/2"
+					},
+					"response": []
+				},
+				{
+					"name": "add new task",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Task",
+									"value": "tech laravel",
+									"type": "text"
+								},
+								{
+									"key": "is_done",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "Description",
+									"value": "welcome to laravel",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{BASE_URL}}/tasks/create"
+					},
+					"response": []
+				},
+				{
+					"name": "get task by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BASE_URL}}/tasks/3"
+					},
+					"response": []
+				},
+				{
+					"name": "update task",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Task\":\"tech php\",\r\n    \"is_done\":1,\r\n    \"Description\":\"welcome to php\"\r\n}"
+						},
+						"url": "{{BASE_URL}}/tasks/update/1"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://127.0.0.1:8000/api",
+			"type": "string"
+		}
+	]
+}
